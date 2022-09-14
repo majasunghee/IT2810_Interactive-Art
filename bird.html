@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <title>A psychedelic day</title>
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <div class="header">
+        <h1>A psychedelic day</h1>
+        <h3>About the artist</h3>
+        <p id="artistText">
+          Sometimes I doze off and wake up just to find myself in the form of a geometric bird.
+          Nothing cool, just a plain o'l birdie.
+          Flying is cool and all til you realize you still can't escape from the wrath of assignments though. <br> <br>
+          ...But, wait. Why does my stress manifest itself in these strange forms?
+        </p>
+      </div>
+
+      <div class="grid-canvas">
+        <h2>Psychedelic confused canvas-bird</h2>
+        <canvas id="canvas" width="400" height="400"></canvas> <br>
+        <span class="caption">Hover over the image to make the bird change color</span><br>
+        <button id="toggleAnimation">Toggle animation</button>
+      </div>
+
+      <div class="grid-svg">
+        <h2>Psychedelic stressed svg-bird</h2>
+        <svg id="svg" width="400" height="400"> </svg> <br>
+        <span class="caption">Hover over the image to make the bird change color</span><br>
+        <button id="toggleAnimation2">Toggle animation</button>
+       </div>
+    </div>
+
+
+    <div class="footer">
+      <button id="toggleHide">Click to display documentation</button>
+
+      <div id="documentation" class="textbox">
+        <h3>CSS-grid/Flexbox</h3>
+          <p>
+            I chose to use CSS-grid when making the layout for my website.
+            This is because I prefer the flexibility the CSS-grid's two dimensional layout provides compared to flexbox which is primarily designed for a one dimensional layout.
+            In addition, CSS-grid was built with responsiveness in mind, so I found it easier to manipulate my layout the way I wanted with this technology.
+            My CSS-grid is set up so that each div in the wrapper takes up a certain fraction of the page.
+            I found this to be the best way to use CSS-grid, as I could choose how may fractions horizontally and vertically I wanted each div to span.
+            Thus when you make the browser window smaller, all the grid-elements will adapt to the change accordingly.
+          </p>
+
+        <h3>Canvas/SVG</h3>
+          <p>
+            I used Canvas and SVG to make a bird composed of several geometrical shapes.
+            The bird itself is static, but you can interact with it so that it changes color upon hovering.
+            In addition I implemented an functions for an animation which can be toggled on/off by clicking on a button.
+            In both Canvas and SVG, I made functions for generating particles (small circles) of random size and color.
+            The particles are meant to appear on random positions within the Canvas/SVG element.
+            The particles are thought to be a disruptive element that complements the idea behind the "confused bird" and the "stressed bird". <br><br>
+            I chose to code the picture to be as similar as possible in both Canvas and SVG, but made the interactive effects slightly different from each other.
+            This was done purposefully to get a different impresssion from each picture, even though the picture itself is the same.
+          </p>
+
+        <h3>JQuery</h3>
+          <p>
+            I have used the Jquery-library from Google's CDN.
+            In my assignment, I have mainly used JQuery to implement different types of interactivity in my Canvas and SVG element.
+            This includes the ability to change color of elements upon hovering, and being able to toggle the animations on/off.
+            I found this to be done fairly easily with the help of Jquery as opposed to writing it in regular javascript, as these actions only required a few lines of code.
+            I also used JQuery to hide/show my documentation by clicking on a button.
+          </p>
+
+        <h3>Cross-Browser Testing</h3>
+          <p>I conducted cross-browser testing on Google Chrome and Mozilla Firefox.
+            I tested and made sure that the layout would be similar on both browsers when the browser window was normal, and when I made the browser window smaller.
+            I read that Jquery is cross-browser compatible, so I assumed that my on-hover function and animation would behave similarly in Google Chrome and Mozilla Firefox.
+            To make sure, I also conducted test to show that the navigation and animation functioned in a similar manner - which it did.
+          </p>
+
+        <h3>Useful sources</h3>
+         <p>
+           In this project, I found W3school.com, developer.mozilla.org to be great sources of information for learning more about Canvas, SVG and JQuery.
+           In addition, I went on stackoverflow.com for advice when I encountered more specific problems related to my code.
+         </p>
+
+       <h3>Sources</h3>
+       <p id="lastParagraph">
+         <a href=https://www.youtube.com/watch?v=hotMX-pqjkQ>Youtube video</a> Was used to learn about animating in Canvas <br>
+         <a href=https://www.youtube.com/watch?v=jV8B24rSN5o&t=1488s>Youtube video</a> A great guide for learning about manipulating your CSS-grid layout
+       </p>
+
+      </div>
+    </div>
+
+  </body>
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/canvas.js"></script>
+  <script src="js/svg.js"></script>
+  <script src="js/script.js"></script>
+</html>
